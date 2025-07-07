@@ -41,7 +41,6 @@ Lista l_crear(){
     lista->cursor[TAMANO_MAXIMO-1].siguiente = NULO; //el siguiente del ultimo es NULL
     lista->libre = 0; //el primer nodo libre esta en la posicion 0
     lista->inicio = NULO; //el inicio de la lista vacia en NULL
-
     return lista;
 }
 //
@@ -95,7 +94,8 @@ bool l_borrar(Lista lista, int clave){
     }
 
     bool borre = false;
-    int ante,x = lista->inicio;
+    int ante;
+    int x = lista->inicio;
 
     //borrar apariciones al inicio
     while(x != NULO && lista->cursor[x].datos->clave == clave){
