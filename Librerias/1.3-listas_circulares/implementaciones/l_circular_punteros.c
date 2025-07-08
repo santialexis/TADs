@@ -39,11 +39,17 @@ ListaCirc lc_crear(){
 //
 //
 TipoElemento lc_inicio(ListaCirc lista){
+    if(lista->inicio == NULL){
+        return NULL;
+    }
     return lista->inicio->datos;
 }
 //
 //
 TipoElemento lc_final(ListaCirc lista){
+    if(lista->final == NULL){
+        return NULL;
+    }
     return lista->final->datos;
 }
 //
