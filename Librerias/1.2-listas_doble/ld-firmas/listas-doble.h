@@ -11,7 +11,7 @@ typedef struct ListaDobleRep* ListaDoble;
 struct IteradorRep;
 typedef struct IteradorRep *Iterador;
 
-/*-----FUNCIONES DE LISTAS-----*/
+/*-----FUNCIONES DE LISTAS DOBLES-----*/
 ListaDoble ld_crear();
 //
 bool ld_esta_vacia(ListaDoble lista);
