@@ -217,14 +217,12 @@ bool lc_eliminar_pos(ListaCirc lista, int pos){
         lista->inicio = x->siguiente;
         (lista->inicio)->anterior = lista->final;
         (lista->final)->siguiente = lista->inicio;
-        free(x);
     }
     else if(pos == lc_longitud(lista)){ //eliminar el final
         x = lista->final;
         lista->final = x->anterior;
         (lista->inicio)->anterior = lista->final;
         (lista->final)->siguiente = lista->inicio;
-        free(x);
     }
     else{ //eliminar el resto
         for(int i=1; i < pos; i++){ //me paro en el nodo a eliminar
@@ -235,8 +233,8 @@ bool lc_eliminar_pos(ListaCirc lista, int pos){
 
         ante->siguiente = post;
         post->anterior = ante;
-        free(x);
     }
+    free(x);
     lista->longitud--;
     return true;
 }
