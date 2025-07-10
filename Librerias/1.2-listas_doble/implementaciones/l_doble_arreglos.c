@@ -4,7 +4,7 @@
 
 static const int TAMANO_MAXIMO = 100;
 
-//ESTA IMPLEMENTACION ES EXACTAMENTE LA MISMA QUE LA DE LISTA ENLAZADA NORMAL !!!!!!!!!!!!
+//ESTA IMPLEMENTACION NO ES POSIBLE, SE DEBE USAR AL MENOS UN CURSOR !!!!!!!!!!!!
 //POR ESO NO ESTA TERMINADA, PORQUE NO HACE FALTA
 
 /*===========================================================================================================*/
