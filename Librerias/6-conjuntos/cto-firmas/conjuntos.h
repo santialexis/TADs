@@ -28,8 +28,8 @@ Conjunto cto_union(Conjunto cto_a, Conjunto cto_b); //elementos conjunto A + ele
 Conjunto cto_interseccion(Conjunto cto_a, Conjunto cto_b); //elementos que estan tanto en el conjunto A como en el B
 //
 Conjunto cto_diferencia(Conjunto cto_a, Conjunto cto_b); //elementos del conjunto A que no estan en el B
-//                                                       + elementos del conjunto B que no estan en el A
-Conjunto cto_recuperar_pos(Conjunto conjunto, int pos);
+//
+TipoElemento cto_recuperar_pos(Conjunto conjunto, int pos);
 //
 void cto_mostrar(Conjunto conjunto);
 

@@ -55,3 +55,61 @@ bool cto_pertenece(Conjunto conjunto, int clave){
 }
 //
 //
+Conjunto cto_union(Conjunto cto_a, Conjunto cto_b){
+    Conjunto res = cto_crear();
+    Iterador iter = iterador(cto_a->lista);
+    while(hay_siguiente(iter)){
+        cto_agregar(res, siguiente(iter));
+    }
+    free(iter);
+
+    iter = iterador(cto_b->lista);
+    while(hay_siguiente(iter)){
+        cto_agregar(res,siguiente(iter));
+    }
+    free(iter);
+    return res;
+}
+//
+//
+Conjunto cto_interseccion(Conjunto cto_a, Conjunto cto_b){
+    Conjunto res = cto_crear();
+    Iterador iter = iterador(cto_a->lista);
+    while(hay_siguiente(iter)){
+        TipoElemento te = siguiente(iter);
+        if(cto_pertenece(cto_b,te->clave)){
+            cto_agregar(res,te);
+        }
+    }
+    free(iter);
+    return res;
+}
+//
+//
+Conjunto cto_diferencia(Conjunto cto_a, Conjunto cto_b){
+    Conjunto res = cto_crear();
+    Iterador iter = iterador(cto_a->lista);
+    while(hay_siguiente(iter)){
+        TipoElemento te = siguiente(iter);
+        if(!cto_pertenece(cto_b,te->clave)){
+            cto_agregar(res,te);
+        }
+    }
+    free(iter);
+    return res;
+}
+//
+//
+TipoElemento cto_recuperar_pos(Conjunto conjunto, int pos){
+    return l_recuperar_pos(conjunto->lista,pos);
+}
+//
+//
+void cto_mostrar(Conjunto conjunto){
+    if(cto_esta_vacio(conjunto)){
+        printf("\nEl conjunto esta vacio...\n");
+    }
+    else{
+        l_mostrar(conjunto->lista);
+    }
+}/*===========================================================================================================*/
